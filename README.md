@@ -1,10 +1,10 @@
 ### Text2XML
 
-To be able to use this tool a modern version of Node js has to be installed on the machine. The program takes a user input in the terminal which is a file name. It then checks if the file is found in the directory and of correct format. After that does a basic validation of the text file.
+To be able to use this tool a modern version of Node js has to be installed on your machine. The program takes a user input from the terminal which is a file name. It then checks if the file is found in the directory and if it is of a correct format. After that it does a basic validation of the text file.
 
 ### About the text file:
 
-file format should be as follows:
+The file format should be as follows:
 
 ```
 P|first name|last name
@@ -17,7 +17,7 @@ F|name|year of birth
 P could be followed by T, A and F
 F could be followed by T and A
 ```
-###### Exemple:
+###### Example:
 
 ```
 P|Carl Gustaf|Bernadotte
@@ -57,16 +57,21 @@ Gives XML as:
 </people>
 ```
 #### How to use it:
-1. Clone the repo
-2. Navigate to the root of the repository
-3. Execute the command line `npm install` in the terminal
-4. Run node index.js
-5. Give the name of the text file you want to convert to xml with the **.txt** extension. Obs! The file should be in the same directory.
+1. Clone the repo as follows:
+
+    `git clone git@github.com:bashikr/text2xml.git`
+1. Navigate to the root of the repository
+1. Execute the command line `npm install` in the terminal
+1. Run `node index.js`
+1. Give the name of the text file you want to convert to xml with the **.txt** extension.
+    `Obs! The file should be in the same directory.`
 
 #### Test cases:
-you have some test scenarios where one can see what happens if one:
+There are some test scenarios as text files. They are placed in a folder called `tests`. when executing them one can see what happens if he/she:
 
 1. Writes more than one letter in the tag cell inside the text file.
 2. Writes a tag that is not like P, T, A, F or p, t, a, f.
 3. Removes the last cell of a line.
 4. Adds an empty line to the text file.
+5. Adds more than one child tag to the family parent tag.
+6. If the first tag is not P or p.
